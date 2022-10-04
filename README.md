@@ -1,7 +1,7 @@
 # 健康管理系统 My Health(GUI)
 
 - ## 概述
-  本项目使用maven进行项目构建管理，使用javaFX和JFoenix实现GUI界面，使用mysql数据库，web框架使用mybatis、spring
+  基于javaFX及JFoenix的健康管理系统，PC端应用，包含GUI界面，技术栈：maven、javaFX、JFoenix、MySQL、Spring、MyBatis
 ------
 
 - ## 环境
