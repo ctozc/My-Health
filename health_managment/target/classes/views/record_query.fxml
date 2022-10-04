@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="cpw" onMouseEntered="#recordInit" prefHeight="600.0" prefWidth="680.0" stylesheets="@../css/user.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgs.controller.UserC">
+   <children>
+      <TableView fx:id="recordTable" layoutY="-2.0" prefHeight="464.0" prefWidth="680.0" editable="true">
+         <columns>
+            <TableColumn fx:id="recordId" prefWidth="100.0" text="id"/>
+            <TableColumn fx:id="recordWeight" prefWidth="100.0" text="weight"/>
+            <TableColumn fx:id="recordTemperature" prefWidth="100.0" text="temperature"/>
+            <TableColumn fx:id="recordBloodPressure" prefWidth="100.0" text="blood pressure"/>
+            <TableColumn fx:id="recordTextualNote" prefWidth="100.0" text="textual note"/>
+            <TableColumn fx:id="createTime" prefWidth="180.0" text="create time"/>
+         </columns>
+      </TableView>
+
+      <TextField fx:id="deleteRecordId" layoutY="480.0"/>
+      <JFXButton fx:id="deleteRecord" layoutX="170" layoutY="480.0" onAction="#deleteRecord" prefHeight="10.0" prefWidth="55.0" text="Delete by Id" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <style>
+            -jfx-button-type: RAISED;
+            -fx-background-color: #3b38ff;
+            -fx-text-fill: white;
+            -fx-pref-width: 100;
+            -fx-background-radius: 25;
+            -fx-border-radius: 25;
+         </style>
+      </JFXButton>
+
+      <JFXButton layoutX="370" layoutY="480.0" onAction="#exportRecords" prefHeight="10.0" prefWidth="55.0" text="Export records" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <style>
+            -jfx-button-type: RAISED;
+            -fx-background-color: #3b38ff;
+            -fx-text-fill: white;
+            -fx-pref-width: 160;
+            -fx-background-radius: 25;
+            -fx-border-radius: 25;
+         </style>
+      </JFXButton>
+
+      <Text fx:id="exportTip" fill="#ed0707" layoutX="370.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="179.59823894500732">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgs.dao.RecordDao">
+    <resultMap id="resultMap" type="com.lgs.entity.Record">
+        <id property="id" column="id" javaType="Long"/>
+        <result property="userId" column="user_id" javaType="Long"/>
+        <result property="weight" column="weight" javaType="String"/>
+        <result property="temperature" column="temperature" javaType="String"/>
+        <result property="bloodPressure" column="blood_pressure" javaType="String"/>
+        <result property="textualNote" column="textual_note" javaType="String"/>
+        <result property="createTime" column="create_time" javaType="String"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="Record">
+        INSERT into tb_record(user_id, weight, temperature, blood_pressure, textual_note, create_time)
+        values (#{userId}, #{weight}, #{temperature}, #{bloodPressure}, #{textualNote}, #{createTime})
+    </insert>
+
+    <delete id="delete" parameterType="Long">
+        delete from tb_record where id =#{id}
+    </delete>
+
+    <update id="update" parameterType="Record" >
+        update tb_record
+        set weight = #{record.weight}, temperature=#{record.temperature}, blood_pressure=#{record.bloodPressure}, textual_note = #{record.textualNote}
+        where id=#{record.id}
+    </update>
+
+    <select id="batchQueryByUserId" parameterType="Long" resultMap="resultMap">
+        select * from tb_record where user_id=#{userId}
+    </select>
+</mapper>

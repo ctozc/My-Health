@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.TilePane?>
+<AnchorPane id="cpw" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/user.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgs.controller.UserC">
+   <children>
+      <Text layoutX="173.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="173.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <JFXButton onAction="#cpw_edit" id="cpw_edit" fx:id="cpw_edit" layoutX="233.0" layoutY="211.0" text="Submit" textFill="#fcfcfc" />
+      <TextField fx:id="cpw_last_name" layoutX="233.0" layoutY="162.0" />
+      <TextField fx:id="cpw_first_name" layoutX="233.0" layoutY="125.0" />
+   </children>
+
+   <Text fx:id="editTip" fill="#ed0707" layoutX="203.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="211.0" textAlignment="CENTER" wrappingWidth="219.59823894500732">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Text>
+</AnchorPane>

@@ -1,0 +1,41 @@
+#splitPane{
+    -fx-background-color: #f1fbf6;
+}
+
+#splitPane2{
+    -fx-background-insets: 0;
+}
+
+#title{
+    -fx-font-size: 25;
+}
+
+#content{
+    -fx-font-size: 15;
+}
+
+#username{
+    -fx-text-fill: rgba(117, 126, 111, 0.99);
+}
+
+#password{
+    -fx-text-fill: rgba(117, 126, 111, 0.99);
+}
+
+#login{
+    -jfx-button-type: RAISED;
+    -fx-background-color: #3b38ff;
+    -fx-text-fill: white;
+    -fx-pref-width: 100;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+#register{
+    -jfx-button-type: RAISED;
+    -fx-background-color: #3b38ff;
+    -fx-text-fill: white;
+    -fx-pref-width: 100;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}

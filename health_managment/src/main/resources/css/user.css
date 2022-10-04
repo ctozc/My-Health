@@ -1,0 +1,46 @@
+#top{
+    -fx-background-color: linear-gradient(to right, #4b5fff, #b079ff);
+}
+
+#topImg{
+    -fx-border-radius: 15;
+}
+
+#cpw{
+    -fx-background-color: linear-gradient(to bottom, #c5e3ff, #9ca8ff );
+}
+
+#cpw_edit{
+    -fx-background-color: #6178ff;
+    -fx-pref-width: 60;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+#cpw_reset{
+    -fx-background-color: #ff1835;
+    -fx-pref-width: 60;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+#feeQuery{
+    -fx-background-color: #6178ff;
+    -fx-pref-width: 120;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+#feeAdd{
+    -fx-background-color: #6178ff;
+    -fx-pref-width: 120;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+#room{
+    -fx-background-color: #6178ff;
+    -fx-pref-width: 120;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgs.dao.UserDao">
+    <!--结果集-->
+    <resultMap id="resultMap" type="com.lgs.entity.User">
+        <id property="id" column="id" javaType="Long"/>
+        <result property="username" column="username" javaType="String"/>
+        <result property="password" column="password" javaType="String"/>
+        <result property="firstName" column="first_name" javaType="String"/>
+        <result property="lastName" column="last_name" javaType="String"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="User">
+         insert into tb_user(username, password)
+        values (#{username},#{password})
+    </insert>
+
+    <delete id="delete" parameterType="String">
+        delete from tb_user where username=#{username}
+    </delete>
+
+    <update id="updatePassword" parameterType="String">
+         UPDATE tb_user
+         set password=#{password}
+        where username=#{username}
+    </update>
+
+    <update id="update" parameterType="String">
+         UPDATE tb_user
+         set first_name=#{user.firstName},last_name=#{user.lastName}
+        where username=#{userName}
+    </update>
+
+    <select id="selectByUsername" parameterType="String" resultMap="resultMap">
+        select * from tb_user where username=#{username}
+    </select>
+
+    <select id="selectAll" resultMap="resultMap">
+        select * from tb_user
+    </select>
+
+</mapper>

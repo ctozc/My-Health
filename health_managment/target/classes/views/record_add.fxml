@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="cpw" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/user.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgs.controller.UserC">
+   <children>
+      <TextField fx:id="weight" layoutX="198.0" layoutY="66.0" />
+      <TextField fx:id="bloodPressure" layoutX="198.0" layoutY="110.0"/>
+      <TextField fx:id="temperature" layoutX="198.0" layoutY="150.0"/>
+      <TextArea fx:id="textualNote" layoutX="198.0" layoutY="180.0" prefHeight="140.0" prefWidth="336.0" />
+
+      <Text layoutX="86.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="weight:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+
+      <Text layoutX="86.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="temperature:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+
+      <Text layoutX="86.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="blood pressure:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+
+      <Text layoutX="86.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="textual note:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+
+      <JFXButton id="cpw_edit" layoutX="191.0" layoutY="331.0" onAction="#insertRecord" text="Submit" textFill="WHITE" buttonType="RAISED" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <style>
+            #cpw_edit{
+            -jfx-button-type: RAISED;
+            -fx-background-color: #3b38ff;
+            -fx-text-fill: white;
+            -fx-pref-width: 100;
+            -fx-background-radius: 25;
+            -fx-border-radius: 25;
+            }
+         </style>
+      </JFXButton>
+
+      <Text fx:id="editTip" fill="#ed0707" layoutX="365.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="179.59823894500732">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

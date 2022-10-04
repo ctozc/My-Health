@@ -1,0 +1,9 @@
+com/lgs/dao/UserDao.class
+com/lgs/entity/Record.class
+com/lgs/controller/StageManage.class
+com/lgs/entity/User.class
+com/lgs/utils/MD5.class
+com/lgs/controller/LoginC.class
+com/lgs/Main.class
+com/lgs/dao/RecordDao.class
+com/lgs/controller/UserC.class

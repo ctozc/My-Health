@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/user.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgs.controller.UserC">
+    <children>
+        <Pane id="top" layoutY="-1.0" prefHeight="40.0" prefWidth="600.0">
+            <children>
+                <Text fill="WHITE" fontSmoothingType="LCD" layoutX="40.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to My Health" textAlignment="CENTER" wrappingWidth="269.99999582767487">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <JFXButton layoutX="517.0" layoutY="9.0" onAction="#exist" style="-fx-background-color: red;" text="Log Out" textFill="WHITE" />
+            </children>
+        </Pane>
+
+        <Pane layoutY="40.0" prefHeight="362.0" prefWidth="200.0">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <children>
+                <Accordion layoutX="-2.0" prefHeight="161.0" prefWidth="202.0">
+                    <panes>
+                  <TitledPane animated="false" text="Info Management">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton layoutY="-4.0" onAction="#getUserInfo" prefHeight="47.0" prefWidth="200.0" text="User Info" textAlignment="CENTER" />
+                              <JFXButton layoutY="42.0" onAction="#updateInfo" prefHeight="47.0" prefWidth="200.0" text="Update Info" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                        <TitledPane animated="false" style="-fx-background-color: red;" text="Record Management" textFill="#212022">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <JFXButton layoutY="1.0" onAction="#recordAdd" prefHeight="48.0" prefWidth="200.0" text="create record" textAlignment="CENTER">
+                                        <opaqueInsets>
+                                            <Insets />
+                                        </opaqueInsets>
+                                        </JFXButton>
+                                        <JFXButton layoutY="47.0" onAction="#recordQuery" prefHeight="47.0" prefWidth="200.0" text="record list" textAlignment="CENTER" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </children>
+        </Pane>
+        <Pane fx:id="rightPane" layoutX="200.0" layoutY="41.0" prefHeight="355.0" prefWidth="400.0" />
+    </children>
+</AnchorPane>
