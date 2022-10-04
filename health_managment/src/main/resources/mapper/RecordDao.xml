@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lgs.dao.RecordDao">
-    <resultMap id="resultMap" type="com.lgs.entity.Record">
+<mapper namespace="com.zc.dao.RecordDao">
+    <resultMap id="resultMap" type="com.zc.entity.Record">
         <id property="id" column="id" javaType="Long"/>
         <result property="userId" column="user_id" javaType="Long"/>
         <result property="weight" column="weight" javaType="String"/>
